@@ -1,0 +1,17 @@
+$scope.openMap = function(){
+	// console.log('openMap button clicked');
+	alert('button clicked');
+	
+	var destination = [3.252698, 101.740107]; // UIA Gombak
+	var start       = [3.157741, 101.712167]; // KLCC
+	window.launchnavigator.navigate(destination, start, function () {
+		// console.log("navigator launched");
+		alert('navigator launched');
+	}, function (err) {
+		// console.error(err);
+		alert('error: ' + err);
+	});
+
+}
+
+<button class="button button-positive button-block" ng-click="openMap()">Open Maps</button>
